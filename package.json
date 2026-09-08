@@ -1,0 +1,15 @@
+{
+  "name": "ubc-godaddy-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "main": "server.mjs",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "echo build",
+    "start": "node server.mjs",
+    "test": "node --test server.test.mjs"
+  }
+}
