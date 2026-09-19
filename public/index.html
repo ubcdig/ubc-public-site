@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..700;1,6..72,300..600&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/compact.css?v=10" />
+  <link rel="stylesheet" href="css/compact.css?v=21" />
 </head>
 <body>
 <main class="regional-page compact-site">
@@ -24,6 +24,7 @@
       <a class="site-brand" href="#top" aria-label="UBC home"><span aria-hidden="true">U</span><strong>UBC</strong></a>
       <nav aria-label="Primary navigation">
         <a href="#leadership">Leadership</a>
+        <a href="#team">Our team</a>
         <a href="#capabilities">Capabilities</a>
         <a href="#region">Region</a>
         <a class="nav-action" href="#contact">Start a conversation <span aria-hidden="true">↗</span></a>
@@ -34,6 +35,7 @@
   <nav class="section-nav" aria-label="Page sections">
     <a href="#top" data-section-link="top"><span>Overview</span><i aria-hidden="true"></i></a>
     <a href="#leadership" data-section-link="leadership"><span>Leadership</span><i aria-hidden="true"></i></a>
+    <a href="#team" data-section-link="team"><span>Our team</span><i aria-hidden="true"></i></a>
     <a href="#capabilities" data-section-link="capabilities"><span>Capabilities</span><i aria-hidden="true"></i></a>
     <a href="#region" data-section-link="region"><span>Region</span><i aria-hidden="true"></i></a>
     <a href="#contact" data-section-link="contact"><span>Contact</span><i aria-hidden="true"></i></a>
@@ -71,7 +73,12 @@
       </div>
       <div class="leadership-pair">
         <article class="leader-card">
-          <div class="leader-mark" aria-hidden="true"><span>DT</span><small>01 · HEALTHCARE / INSTITUTIONS</small></div>
+          <div class="leader-mark">
+            <div class="leader-portrait-frame">
+              <img src="assets/team/dr-talal-portrait-tile-v2.png" alt="Portrait of Dr. Talal Husseine Saleh Beyari" loading="lazy" decoding="async" width="1110" height="1417" />
+            </div>
+            <small aria-hidden="true">01 · HEALTHCARE / INSTITUTIONS</small>
+          </div>
           <div class="leader-copy">
             <p>HEALTHCARE · INSTITUTIONS</p>
             <h3>Dr. Talal Husseine Saleh Beyari</h3>
@@ -96,6 +103,40 @@
           </div>
         </article>
       </div>
+    </div>
+  </section>
+
+  <section class="site-section team-section" id="team">
+    <div class="site-shell team-grid">
+      <div class="team-heading">
+        <p class="eyebrow">OUR TEAM</p>
+        <h2>Legal counsel<br /><em>for data licensing &amp;<br />cross-border transactions.</em></h2>
+        <p class="team-intro">UBC works with experienced regional counsel on data licensing, technology transactions, corporate matters, and cross-border structuring.</p>
+      </div>
+      <article class="counsel-card">
+        <div class="counsel-firm">
+          <span class="counsel-label">OUTSIDE LEGAL COUNSEL</span>
+          <h3>Tal &amp; Co.<br /><em>Lawyers &amp; Consultants</em></h3>
+          <p>Tal &amp; Co. advises UBC on corporate and commercial matters, including data licensing, technology transactions, healthcare data, AI-related agreements, and cross-border structuring.</p>
+          <a href="https://talcolaw.com" target="_blank" rel="noopener noreferrer">talcolaw.com <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="counsel-lead">
+          <div class="counsel-profile">
+            <div>
+              <span class="counsel-index">01 / LEGAL &amp; REGULATORY</span>
+              <p>FOUNDER &amp; MANAGING LAWYER</p>
+              <h3>Yazan Eltal</h3>
+            </div>
+            <img src="assets/team/yazan-eltal.png" alt="Portrait of Yazan Eltal" loading="lazy" decoding="async" width="1097" height="1434" />
+          </div>
+          <ul>
+            <li>More than 25 years of legal experience across Jordan, Saudi Arabia, Qatar, and the wider Middle East</li>
+            <li>Corporate and commercial transactions, investment, governance, compliance, dispute resolution, and cross-border structuring</li>
+            <li>Advises on technology transactions, data licensing, healthcare-data arrangements, and AI-related commercial agreements</li>
+            <li>LL.B., Yarmouk University; LL.M. in Commercial Law, Macquarie University; admitted to the Jordanian Bar in 1997</li>
+          </ul>
+        </div>
+      </article>
     </div>
   </section>
 
@@ -177,6 +218,6 @@
     <p><a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a><br />© 2026 UBC. All rights reserved.</p>
   </div></footer>
 </main>
-<script src="js/main.js?v=2" defer></script>
+<script src="js/main.js?v=3" defer></script>
 </body>
 </html>

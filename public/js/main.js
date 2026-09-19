@@ -32,7 +32,7 @@
 
   function setActiveSection(id) {
     var sectionNav = document.querySelector('.section-nav');
-    if (sectionNav) sectionNav.classList.toggle('is-light', id === 'contact');
+    if (sectionNav) sectionNav.classList.toggle('is-light', id === 'team' || id === 'contact');
     sectionLinks.forEach(function (link) {
       var active = link.getAttribute('data-section-link') === id;
       if (active) link.setAttribute('aria-current', 'true');
