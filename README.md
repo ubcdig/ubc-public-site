@@ -1,43 +1,40 @@
-# UBC public website
+# UBC GoDaddy v34 — Focused Healthcare + Education Update
 
-This repository is the deliberately small, production-facing UBC website used
-for GoDaddy Node.js Hosting. GoDaddy can import the repository directly because
-`package.json` and the server entry point are at the repository root.
+This revision intentionally makes **minimal changes** to the supplied v33 site.
 
-The server:
+## Page-by-page changes
 
-- serves the approved static UBC site;
-- listens on GoDaddy's required `PORT` environment variable;
-- adds baseline browser security headers;
-- accepts no healthcare files or patient data;
-- proxies the privacy-safe contact request to the existing authoritative D1
-  endpoint; and
-- does not log or persist inquiry contents on GoDaddy.
+### 1. Homepage / hero
+- Keeps healthcare as the primary wedge.
+- Headline: **Healthcare data. Built for AI.**
+- Supporting line: **We access hard-to-reach healthcare data and train the people who make it AI-ready.**
+- Adds the institutional network line: Hospitals / Universities / Research Centers / Labs.
+- Simplifies the operating model to **Access / Train / Deliver**.
+- Hero strip now reads: Healthcare Data / Training & Workforce / Local Expertise / AI-Ready Delivery.
 
-`LEAD_API_URL` may override the existing lead endpoint later. Do not point it
-at an endpoint that lacks equivalent server validation, access controls, and
-durable storage.
+### 2. Leadership
+- No structural or biography changes. Dr. Talal and Jamal remain unchanged.
 
-## Local verification
+### 3. Legal counsel
+- No changes. Tal & Co. / Yazan Eltal remain unchanged.
 
-Node.js 22 or newer is recommended. No third-party runtime packages are
-required.
+### 4. Education & Workforce
+- Keeps Sajid Ali Khan and Mario Perez.
+- Section headline changed to **People power better AI.**
+- Tightened the intro so education clearly supports AI skills, data collection, annotation, validation, and technical careers.
+- Titles refined to:
+  - Sajid: Education Strategy & Institutional Partnerships
+  - Mario: AI & Workforce Education Lead
+- Existing detailed bios, focus areas, and program cards remain intact.
 
-```bash
-npm test
-npm start
-```
+### 5. Region
+- No structural changes.
 
-The server listens on `process.env.PORT` when provided and otherwise uses port
-3000 for local development.
+### 6. Contact
+- No structural changes; current education/workforce and AI-data inquiry options remain.
 
-## GoDaddy deployment
-
-1. Create a Node.js Hosting application.
-2. Choose GitHub as the source and select this repository's `main` branch.
-3. Use `npm run build` as the build command and `npm start` as the start
-   command if GoDaddy requests them.
-4. Confirm the GoDaddy preview address works before connecting `ubcdig.com`.
-
-Do not add credentials, patient information, healthcare files, or submitted
-inquiry contents to this repository.
+## Technical notes
+- Existing Node/GoDaddy structure preserved.
+- Existing form endpoint preserved.
+- Existing assets preserved.
+- Only `public/index.html`, `public/css/compact.css`, `server.test.mjs`, and this README were changed.
