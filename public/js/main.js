@@ -32,7 +32,7 @@
 
   function setActiveSection(id) {
     var sectionNav = document.querySelector('.section-nav');
-    if (sectionNav) sectionNav.classList.toggle('is-light', id === 'team' || id === 'education' || id === 'contact');
+    if (sectionNav) sectionNav.classList.toggle('is-light', id === 'team' || id === 'education' || id === 'partners' || id === 'contact');
     sectionLinks.forEach(function (link) {
       var active = link.getAttribute('data-section-link') === id;
       if (active) link.setAttribute('aria-current', 'true');
@@ -69,6 +69,15 @@
   var status = document.getElementById('form-status');
   var submit = form.querySelector('[type="submit"]');
   var requiredFields = Array.prototype.slice.call(form.querySelectorAll('[required]'));
+  var inquirySelect = form.querySelector('[name="inquiry-type"]');
+
+  Array.prototype.slice.call(document.querySelectorAll('[data-inquiry-option]')).forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (!inquirySelect) return;
+      inquirySelect.value = link.getAttribute('data-inquiry-option') || '';
+      inquirySelect.dispatchEvent(new Event('change', { bubbles: true }));
+    });
+  });
 
   function setValidityState(el, isValid) {
     el.classList.toggle('is-invalid', !isValid);
@@ -127,6 +136,7 @@
       'Source healthcare data': 'Data buyer',
       'Discuss an institutional partnership': 'Healthcare institution',
       'Discuss a commercial partnership': 'Commercial partner',
+      'Explore an operating or strategic partnership': 'Commercial partner',
       'Other': 'Other'
     };
 
